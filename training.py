@@ -56,6 +56,12 @@ def build_model():
         # Max-pooling
         tf.keras.layers.MaxPooling2D(pool_size=(2, 2)),
 
+        # Convolutional layer
+        tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
+
+        # Max-pooling
+        tf.keras.layers.MaxPooling2D(pool_size=(2, 2)),
+
         # Flatten
         tf.keras.layers.Flatten(),
 
