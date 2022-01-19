@@ -66,8 +66,10 @@ def build_model():
         tf.keras.layers.Flatten(),
 
         # Hidden layer
+        tf.keras.layers.Dense(32, activation='relu'),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(128, activation='relu'),
+        tf.keras.layers.Dense(64, activation='relu'),
 
         # Dropout
         tf.keras.layers.Dropout(0.5),
